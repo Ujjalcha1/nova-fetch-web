@@ -41,6 +41,7 @@ export default function HeroPreview() {
           width={1400}
           height={900}
           priority
+          sizes="(max-width: 1024px) 100vw, 50vw"
           className="w-full object-cover"
         />
       </div>

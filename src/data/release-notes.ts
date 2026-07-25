@@ -1,4 +1,4 @@
-export const releaseNotes = [
+export const releaseNotes: string[] = [
   "New modern UI",
   "Download Queue",
   "Playlist Support",

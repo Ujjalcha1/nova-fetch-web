@@ -1,6 +1,4 @@
-"use client";
-
-import { Download, Github } from "lucide-react";
+import { Download, GitBranch } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui";
 import DownloadButton from "../download/DownloadButton";
@@ -16,8 +14,8 @@ export default function HeroButtons() {
       </Button>
 
       <Button asChild variant="secondary" className="h-12 px-8 text-base">
-        <Link href="https://github.com" target="_blank">
-          <Github className="mr-2 h-5 w-5" />
+        <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <GitBranch className="mr-2 h-5 w-5" aria-hidden="true" />
           GitHub
         </Link>
       </Button>

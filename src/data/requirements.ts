@@ -1,4 +1,9 @@
-export const requirements = [
+export interface Requirement {
+  title: string;
+  value: string;
+}
+
+export const requirements: Requirement[] = [
   {
     title: "Operating System",
     value: "Windows 10 / Windows 11",

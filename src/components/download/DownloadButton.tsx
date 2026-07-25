@@ -11,7 +11,7 @@ export default function DownloadButton() {
     return <Button disabled>Loading...</Button>;
   }
 
-  const asset = release?.assets.find((asset) => asset.name.endsWith(".exe"));
+  const asset = release?.assets?.find((asset) => asset.name.endsWith(".exe"));
 
   if (!asset) {
     return <Button disabled>No Windows Download</Button>;
@@ -19,7 +19,11 @@ export default function DownloadButton() {
 
   return (
     <Button asChild>
-      <a href={asset.browser_download_url} target="_blank">
+      <a
+        href={asset.browser_download_url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Download {release?.tag_name}
       </a>
     </Button>

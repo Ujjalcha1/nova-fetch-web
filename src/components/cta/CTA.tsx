@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import SpotlightCard from "@/components/reactbits/SpotlightCard";
 import Section from "@/components/ui/Section";
 import BackgroundGlow from "./BackgroundGlow";
 import CTAButtons from "./CTAButtons";
@@ -30,7 +29,7 @@ export default function CTA() {
         >
           Download videos
           <br />
-          <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
             without limits.
           </span>
         </motion.h2>

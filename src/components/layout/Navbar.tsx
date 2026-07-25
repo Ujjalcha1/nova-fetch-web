@@ -1,5 +1,3 @@
-"use client";
-
 import Logo from "./Logo";
 import NavLink from "./NavLink";
 import { navigation } from "@/data/navigation";

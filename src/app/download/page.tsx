@@ -9,6 +9,7 @@ import ChecksumCard from "@/components/download/ChecksumCard";
 
 export default function DownloadPage() {
   return (
+    <main>
     <Container className="py-24">
       <div className="mx-auto max-w-3xl text-center">
         <h1 className="text-5xl font-black text-white">Download Nova Fetch</h1>
@@ -30,5 +31,6 @@ export default function DownloadPage() {
         <ChecksumCard />
       </div>
     </Container>
+    </main>
   );
 }

@@ -2,7 +2,7 @@ import Badge from "@/components/ui/Badge";
 import HeroButtons from "./HeroButtons";
 import HeroBadges from "./HeroBadges";
 import HeroStats from "./HeroStats";
-import SplitText from "@/reactbits/SplitText/SplitText";
+import SplitText from "@/components/reactbits/SplitText";
 
 export default function HeroContent() {
   return (

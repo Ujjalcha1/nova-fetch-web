@@ -1,5 +1,5 @@
 import { Download } from "lucide-react";
-import Button from "@/components/ui/Button";
+import { Button, GlassCard } from "@/components/ui";
 
 interface Props {
   title: string;
@@ -13,7 +13,7 @@ interface Props {
 
 export default function DownloadCard(props: Props) {
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
+    <GlassCard className="p-8">
       <h3 className="text-2xl font-bold text-white">{props.title}</h3>
 
       <p className="mt-2 text-gray-400">{props.description}</p>
@@ -27,13 +27,13 @@ export default function DownloadCard(props: Props) {
       <Button
         asChild
         className="mt-8 w-full"
-        variant={props.primary ? "default" : "secondary"}
+        variant={props.primary ? "primary" : "secondary"}
       >
         <a href={props.downloadUrl}>
-          <Download className="mr-2 h-5 w-5" />
+          <Download className="mr-2 h-5 w-5" aria-hidden="true" />
           Download
         </a>
       </Button>
-    </div>
+    </GlassCard>
   );
 }

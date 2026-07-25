@@ -10,17 +10,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${siteConfig.url}/download`,
     },
-    {
-      url: `${siteConfig.url}/blog`,
-    },
-    {
-      url: `${siteConfig.url}/changelog`,
-    },
-    {
-      url: `${siteConfig.url}/privacy`,
-    },
-    {
-      url: `${siteConfig.url}/terms`,
-    },
   ];
 }

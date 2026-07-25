@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import GlassCard from "@/components/ui/GlassCard";
 import Rating from "./Rating";
+import SpotlightCard from "@/components/reactbits/SpotlightCard";
 
 interface Props {
   name: string;
@@ -37,13 +37,14 @@ export default function TestimonialCard({
         <p className="mt-6 leading-7 text-gray-300">"{review}"</p>
 
         <div className="mt-8 flex items-center gap-4">
-          <Image
-            src={avatar}
-            alt={name}
-            width={56}
-            height={56}
-            className="rounded-full"
-          />
+        <Image
+          src={avatar}
+          alt={name}
+          width={56}
+          height={56}
+          sizes="56px"
+          className="rounded-full"
+        />
 
           <div>
             <h4 className="font-semibold text-white">{name}</h4>

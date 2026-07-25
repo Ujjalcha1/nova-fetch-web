@@ -14,7 +14,7 @@ export default function BackgroundGlow() {
           duration: 8,
           repeat: Infinity,
         }}
-        className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/30 blur-[140px]"
+        className="absolute left-1/2 top-1/2 h-105 w-105 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/30 blur-[140px]"
       />
 
       <motion.div

@@ -12,6 +12,7 @@ export default function Image() {
     <div
       style={{
         display: "flex",
+        flexDirection: "column",
         width: "100%",
         height: "100%",
         background: "#09090b",
@@ -22,7 +23,17 @@ export default function Image() {
         fontWeight: 800,
       }}
     >
-      Nova Fetch
+      <span>Nova Fetch</span>
+      <span
+        style={{
+          fontSize: 28,
+          fontWeight: 400,
+          color: "#a1a1aa",
+          marginTop: 16,
+        }}
+      >
+        Fast Windows Video Downloader
+      </span>
     </div>,
     size,
   );

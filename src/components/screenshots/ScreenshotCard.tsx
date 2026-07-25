@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
-
+import SpotlightCard from "@/components/reactbits/SpotlightCard";
 import DeviceFrame from "./DeviceFrame";
 
 interface Props {
@@ -20,6 +17,7 @@ export default function ScreenshotCard({ title, description, image }: Props) {
           alt={title}
           width={1400}
           height={900}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="w-full object-cover"
         />
       </DeviceFrame>

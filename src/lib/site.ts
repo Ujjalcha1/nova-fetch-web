@@ -1,4 +1,14 @@
-export const siteConfig = {
+export interface SiteConfig {
+  name: string;
+  shortName: string;
+  description: string;
+  url: string;
+  ogImage: string;
+  creator: string;
+  keywords: string[];
+}
+
+export const siteConfig: SiteConfig = {
   name: "Nova Fetch",
   shortName: "NovaFetch",
   description:

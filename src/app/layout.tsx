@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
-import Aurora from "@/reactbits/Aurora/Aurora";
 import { siteConfig } from "@/lib/site";
-import { AuroraBackground, Spotlight } from "@/components/reactbits";
+import { Aurora, Spotlight } from "@/components/reactbits";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -51,6 +50,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#09090b",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,8 +64,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {" "}
-        <Aurora colorStops={["#7c3aed", "#2563eb", "#ec4899"]} />
+        <div className="fixed inset-0 -z-10">
+          <Aurora />
+        </div>
         <Spotlight />
         {children}
       </body>

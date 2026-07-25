@@ -1,4 +1,12 @@
-export const demoVideo = {
+export interface DemoVideo {
+  title: string;
+  channel: string;
+  duration: string;
+  thumbnail: string;
+  qualities: string[];
+}
+
+export const demoVideo: DemoVideo = {
   title: "Amazing Nature in 4K HDR",
   channel: "Nova Demo",
   duration: "12:32",

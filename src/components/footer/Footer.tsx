@@ -6,7 +6,7 @@ import { footerColumns } from "@/data/footer";
 
 import FooterColumn from "./FooterColumn";
 import SocialLinks from "./SocialLinks";
-import AuroraBackground from "@/components/reactbits/AuroraBackground";
+
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 py-20">

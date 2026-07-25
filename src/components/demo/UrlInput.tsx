@@ -1,3 +1,7 @@
+"use client";
+
+import { Button } from "@/components/ui";
+
 interface Props {
   value: string;
   onChange: (value: string) => void;
@@ -11,15 +15,11 @@ export default function UrlInput({ value, onChange, onFetch }: Props) {
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder="Paste YouTube URL..."
+        aria-label="YouTube URL"
         className="flex-1 rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-white outline-none"
       />
 
-      <button
-        onClick={onFetch}
-        className="rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-500 px-8 py-4 font-semibold text-white"
-      >
-        Fetch
-      </button>
+      <Button onClick={onFetch}>Fetch</Button>
     </div>
   );
 }

@@ -41,7 +41,7 @@ export default function WhyCard({ title, description, icon }: Props) {
       }}
     >
       <GlassCard className="group h-full p-8 transition-all duration-300 hover:border-violet-500/30">
-        <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500">
+        <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-r from-violet-600 to-fuchsia-500">
           <Icon className="h-8 w-8 text-white" />
         </div>
 

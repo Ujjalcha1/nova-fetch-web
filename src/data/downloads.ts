@@ -1,4 +1,15 @@
-export const downloads = [
+export interface DownloadItem {
+  id: string;
+  title: string;
+  file: string;
+  version: string;
+  size: string;
+  description: string;
+  downloadUrl: string;
+  primary: boolean;
+}
+
+export const downloads: DownloadItem[] = [
   {
     id: "installer",
     title: "Windows Installer",

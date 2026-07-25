@@ -4,9 +4,14 @@ import useSWR from "swr";
 
 import { GithubRelease } from "@/types/github";
 
-const fetcher = (url: string) => fetch(url).then((r) => r.json());
+const fetcher = (url: string): Promise<GithubRelease> =>
+  fetch(url).then((r) => r.json());
 
-export function useLatestRelease() {
+export function useLatestRelease(): {
+  release: GithubRelease | undefined;
+  isLoading: boolean;
+  error: Error | undefined;
+} {
   const { data, isLoading, error } = useSWR<GithubRelease>(
     "/api/release",
     fetcher,

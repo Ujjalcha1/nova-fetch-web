@@ -1,4 +1,9 @@
-export const navigation = [
+export interface NavItem {
+  label: string;
+  href: string;
+}
+
+export const navigation: NavItem[] = [
   {
     label: "Features",
     href: "/features",

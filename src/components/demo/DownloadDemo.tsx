@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import Section from "@/components/ui/Section";
 import Heading from "@/components/ui/Heading";
@@ -18,7 +18,7 @@ export default function DownloadDemo() {
 
   const [quality, setQuality] = useState("1080p");
 
-  const handleFetch = () => {
+  const handleFetch = useCallback(() => {
     if (!url.trim()) return;
 
     setLoading(true);
@@ -28,7 +28,7 @@ export default function DownloadDemo() {
       setLoading(false);
       setLoaded(true);
     }, 1800);
-  };
+  }, [url]);
 
   return (
     <Section id="demo">

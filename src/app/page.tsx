@@ -1,26 +1,28 @@
-import Navbar from "@/components/layout/Navbar";
-import Hero from "@/components/hero/Hero";
-import WhyNovaFetch from "@/components/why/WhyNovaFetch";
-import DownloadDemo from "@/components/demo/DownloadDemo";
-import Features from "@/components/features/Features";
-import Screenshots from "@/components/screenshots/Screenshots";
-import Testimonials from "@/components/testimonials/Testimonials";
-import CTA from "@/components/cta/CTA";
-import FAQ from "@/components/faq/FAQ";
-import Footer from "@/components/footer/Footer";
+import { Navbar } from "@/components/layout";
+import { Hero } from "@/components/hero";
+import { WhyNovaFetch } from "@/components/why";
+import { DownloadDemo } from "@/components/demo";
+import { Features } from "@/components/features";
+import { Screenshots } from "@/components/screenshots";
+import { Testimonials } from "@/components/testimonials";
+import { CTA } from "@/components/cta";
+import { FAQ } from "@/components/faq";
+import { Footer } from "@/components/footer";
 
 export default function HomePage() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <WhyNovaFetch />
-      <DownloadDemo />
-      <Features />
-      <Screenshots />
-      <Testimonials />
-      <CTA />
-      <FAQ />
+      <main>
+        <Hero />
+        <WhyNovaFetch />
+        <DownloadDemo />
+        <Features />
+        <Screenshots />
+        <Testimonials />
+        <CTA />
+        <FAQ />
+      </main>
       <Footer />
     </>
   );

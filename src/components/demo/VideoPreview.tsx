@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { demoVideo } from "@/data/demoVideo";
+import { GlassCard } from "@/components/ui";
 import QualitySelector from "./QualitySelector";
 import DownloadButtons from "./DownloadButtons";
 
@@ -12,13 +13,14 @@ interface Props {
 
 export default function VideoPreview({ quality, setQuality }: Props) {
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+    <GlassCard className="overflow-hidden p-6">
       <div className="overflow-hidden rounded-2xl">
         <Image
           src={demoVideo.thumbnail}
           alt={demoVideo.title}
           width={1280}
           height={720}
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="w-full object-cover"
         />
       </div>
@@ -36,6 +38,6 @@ export default function VideoPreview({ quality, setQuality }: Props) {
       />
 
       <DownloadButtons />
-    </div>
+    </GlassCard>
   );
 }

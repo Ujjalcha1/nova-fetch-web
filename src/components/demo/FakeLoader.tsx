@@ -1,5 +1,3 @@
-"use client";
-
 export default function FakeLoader() {
   return (
     <div className="space-y-4 animate-pulse">

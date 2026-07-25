@@ -1,6 +1,23 @@
-import { Github, Twitter, Youtube, Globe } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { GitBranch, X, Play, Globe } from "lucide-react";
 
-export const footerColumns = [
+export interface FooterLink {
+  name: string;
+  href: string;
+}
+
+export interface FooterColumnData {
+  title: string;
+  links: FooterLink[];
+}
+
+export interface SocialLink {
+  icon: LucideIcon;
+  href: string;
+  label: string;
+}
+
+export const footerColumns: FooterColumnData[] = [
   {
     title: "Product",
     links: [
@@ -29,21 +46,25 @@ export const footerColumns = [
   },
 ];
 
-export const socialLinks = [
+export const socialLinks: SocialLink[] = [
   {
-    icon: Github,
+    icon: GitBranch,
     href: "https://github.com/",
+    label: "GitHub",
   },
   {
-    icon: Twitter,
-    href: "https://twitter.com/",
+    icon: X,
+    href: "https://x.com/",
+    label: "X (Twitter)",
   },
   {
-    icon: Youtube,
+    icon: Play,
     href: "https://youtube.com/",
+    label: "YouTube",
   },
   {
     icon: Globe,
     href: "https://novafetch.app",
+    label: "Website",
   },
 ];
