@@ -41,8 +41,8 @@ export default function CTA() {
           viewport={{ once: true }}
           className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-gray-400"
         >
-          Download videos, playlists, subtitles and MP3 with a modern desktop
-          experience powered by Nova Fetch.
+          Download videos, audio and subtitles with a fast, secure and
+          modern desktop experience.
         </motion.p>
 
         <CTAButtons />

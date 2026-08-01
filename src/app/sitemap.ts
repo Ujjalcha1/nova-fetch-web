@@ -2,13 +2,20 @@ import type { MetadataRoute } from "next";
 
 import { siteConfig } from "@/lib/site";
 
+const pages = [
+  "",
+  "/features",
+  "/download",
+  "/faq",
+  "/support",
+  "/changelog",
+  "/contact",
+  "/privacy",
+  "/terms",
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: siteConfig.url,
-    },
-    {
-      url: `${siteConfig.url}/download`,
-    },
-  ];
+  return pages.map((page) => ({
+    url: `${siteConfig.url}${page}`,
+  }));
 }

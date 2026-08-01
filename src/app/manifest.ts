@@ -6,7 +6,8 @@ export default function manifest(): MetadataRoute.Manifest {
 
     short_name: "NovaFetch",
 
-    description: "Modern Windows Video Downloader",
+    description:
+      "Nova Fetch is a modern desktop downloader with a beautiful interface, fast downloads, queue management, resume support and more.",
 
     start_url: "/",
 
@@ -18,13 +19,8 @@ export default function manifest(): MetadataRoute.Manifest {
 
     icons: [
       {
-        src: "/icon-192.png",
-        sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        src: "/icon-512.png",
-        sizes: "512x512",
+        src: "/logos/logo.png",
+        sizes: "500x500",
         type: "image/png",
       },
     ],

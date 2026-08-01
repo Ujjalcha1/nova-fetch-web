@@ -13,7 +13,7 @@ const items = [
   },
   {
     icon: ListVideo,
-    text: "Playlists",
+    text: "Batch Downloads",
   },
   {
     icon: Music4,
@@ -31,7 +31,7 @@ const items = [
 
 export default function HeroBadges() {
   return (
-    <div className="mt-10 flex flex-wrap gap-3">
+    <div className="mt-10 flex flex-wrap justify-center gap-3">
       {items.map((item) => {
         const Icon = item.icon;
 

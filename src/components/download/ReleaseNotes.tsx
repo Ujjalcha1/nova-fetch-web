@@ -5,7 +5,7 @@ import { GlassCard } from "@/components/ui";
 export default function ReleaseNotes() {
   return (
     <GlassCard className="p-8">
-      <h2 className="mb-6 text-2xl font-bold text-white">What's New</h2>
+      <h2 className="mb-6 text-2xl font-bold text-white">What&apos;s New</h2>
 
       <div className="space-y-4">
         {releaseNotes.map((item) => (

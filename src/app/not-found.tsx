@@ -16,7 +16,7 @@ export default function NotFound() {
       <h2 className="mt-6 text-4xl font-bold text-white">Page Not Found</h2>
 
       <p className="mt-6 max-w-lg text-gray-400">
-        The page you're looking for doesn't exist or has been moved.
+        The page you&apos;re looking for doesn&apos;t exist or has been moved.
       </p>
 
       <Button asChild className="mt-10">

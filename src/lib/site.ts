@@ -1,33 +1,37 @@
 export interface SiteConfig {
   name: string;
   shortName: string;
+  title: string;
   description: string;
   url: string;
-  ogImage: string;
   creator: string;
+  supportEmail: string;
   keywords: string[];
 }
 
 export const siteConfig: SiteConfig = {
   name: "Nova Fetch",
   shortName: "NovaFetch",
+
+  title: "Nova Fetch - Fast, Modern & Secure Downloader",
+
   description:
-    "A fast, modern Windows video downloader powered by yt-dlp and FFmpeg.",
+    "Nova Fetch is a modern desktop downloader with a beautiful interface, fast downloads, queue management, resume support and more.",
 
   url: "https://novafetch.app",
 
-  ogImage: "/og-image.png",
-
   creator: "Ujjal Chatterjee",
+
+  supportEmail: "u4472129@gmail.com",
 
   keywords: [
     "Nova Fetch",
+    "Media Downloader",
     "Video Downloader",
-    "YouTube Downloader",
-    "yt-dlp GUI",
+    "Download Manager",
     "Windows Downloader",
-    "FFmpeg",
-    "Playlist Downloader",
-    "MP3 Converter",
+    "Audio Downloader",
+    "Subtitle Downloader",
+    "Fast Downloads",
   ],
 };

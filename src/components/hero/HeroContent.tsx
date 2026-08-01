@@ -6,14 +6,14 @@ import SplitText from "@/components/reactbits/SplitText";
 
 export default function HeroContent() {
   return (
-    <div>
-      <Badge>🚀 The fastest downloader powered by yt-dlp + FFmpeg</Badge>
+    <div className="text-center">
+      <Badge>🚀 The fastest, most secure downloader for Windows</Badge>
 
       <SplitText text="Download Videos Faster Than Ever" />
 
-      <p className="mt-8 max-w-xl text-lg leading-8 text-gray-400">
-        Nova Fetch lets you download videos, playlists, subtitles and audio in
-        the highest quality with a beautiful Windows-native experience.
+      <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-gray-400">
+        Nova Fetch lets you download videos, audio and subtitles in the highest
+        quality with a beautiful Windows-native experience.
       </p>
 
       <HeroButtons />

@@ -19,7 +19,7 @@ const stats = [
 
 export default function HeroStats() {
   return (
-    <div className="mt-12 grid grid-cols-3 gap-6">
+    <div className="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-6">
       {stats.map((stat, index) => (
         <motion.div
           key={stat.label}

@@ -13,11 +13,11 @@ export const navigation: NavItem[] = [
     href: "/download",
   },
   {
-    label: "Blog",
-    href: "/blog",
-  },
-  {
     label: "FAQ",
     href: "/faq",
+  },
+  {
+    label: "Support",
+    href: "/support",
   },
 ];

@@ -1,35 +1,37 @@
+import {
+  DOWNLOAD_URL,
+  INSTALLER_FILENAME,
+  RELEASE_NOTES_URL,
+  WINDOWS_ARCHITECTURE,
+  WINDOWS_PLATFORM,
+  WINDOWS_VERSION,
+} from "@/lib/downloads";
+
 export interface DownloadItem {
   id: string;
   title: string;
+  description: string;
   file: string;
   version: string;
+  platform: string;
+  architecture: string;
   size: string;
-  description: string;
   downloadUrl: string;
-  primary: boolean;
+  releaseNotesUrl: string;
 }
 
 export const downloads: DownloadItem[] = [
   {
-    id: "installer",
-    title: "Windows Installer",
-    file: "NovaFetch-Setup.exe",
-    version: "v1.0.0",
-    size: "52 MB",
+    id: "windows",
+    title: "Download for Windows",
     description:
-      "Recommended for most users. Includes automatic installation and desktop shortcut.",
-    downloadUrl: "#",
-    primary: true,
-  },
-  {
-    id: "portable",
-    title: "Portable ZIP",
-    file: "NovaFetch-Portable.zip",
-    version: "v1.0.0",
-    size: "48 MB",
-    description:
-      "Run without installation. Perfect for USB drives and portable use.",
-    downloadUrl: "#",
-    primary: false,
+      "The official Nova Fetch installer for Windows. Fast setup with automatic updates and a desktop shortcut.",
+    file: INSTALLER_FILENAME,
+    version: WINDOWS_VERSION,
+    platform: WINDOWS_PLATFORM,
+    architecture: WINDOWS_ARCHITECTURE,
+    size: "-- MB",
+    downloadUrl: DOWNLOAD_URL,
+    releaseNotesUrl: RELEASE_NOTES_URL,
   },
 ];

@@ -1,9 +1,9 @@
 export const releaseNotes: string[] = [
   "New modern UI",
-  "Download Queue",
-  "Playlist Support",
+  "Smart Download Queue",
+  "Batch Downloads",
   "Subtitle Downloader",
-  "FFmpeg integration",
+  "Resume Support",
   "Performance improvements",
   "Bug fixes",
 ];

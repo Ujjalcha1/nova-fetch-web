@@ -16,7 +16,7 @@ export const whyFeatures: WhyFeature[] = [
   {
     title: "Blazing Fast",
     description:
-      "Powered by yt-dlp with multi-thread downloading for maximum speed.",
+      "Multi-threaded downloads tuned for maximum speed and reliability.",
     icon: "zap",
   },
   {
@@ -35,8 +35,9 @@ export const whyFeatures: WhyFeature[] = [
     icon: "monitor",
   },
   {
-    title: "Powered by FFmpeg",
-    description: "Automatic merge, conversion and audio extraction.",
+    title: "Lightweight",
+    description:
+      "Runs smoothly on modest hardware without slowing down your system.",
     icon: "cpu",
   },
   {

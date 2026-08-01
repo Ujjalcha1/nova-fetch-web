@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { GitBranch, X, Play, Globe } from "lucide-react";
+import { GitBranch, X, Globe } from "lucide-react";
 
 export interface FooterLink {
   name: string;
@@ -19,29 +19,21 @@ export interface SocialLink {
 
 export const footerColumns: FooterColumnData[] = [
   {
-    title: "Product",
+    title: "Quick Links",
     links: [
-      { name: "Features", href: "#features" },
+      { name: "Features", href: "/features" },
       { name: "Download", href: "/download" },
-      { name: "Changelog", href: "/changelog" },
-      { name: "Roadmap", href: "/roadmap" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { name: "Blog", href: "/blog" },
-      { name: "FAQ", href: "#faq" },
+      { name: "FAQ", href: "/faq" },
       { name: "Support", href: "/support" },
-      { name: "Contact", href: "/contact" },
+      { name: "Changelog", href: "/changelog" },
     ],
   },
   {
     title: "Legal",
     links: [
+      { name: "Contact", href: "/contact" },
       { name: "Privacy", href: "/privacy" },
       { name: "Terms", href: "/terms" },
-      { name: "License", href: "/license" },
     ],
   },
 ];
@@ -56,11 +48,6 @@ export const socialLinks: SocialLink[] = [
     icon: X,
     href: "https://x.com/",
     label: "X (Twitter)",
-  },
-  {
-    icon: Play,
-    href: "https://youtube.com/",
-    label: "YouTube",
   },
   {
     icon: Globe,
