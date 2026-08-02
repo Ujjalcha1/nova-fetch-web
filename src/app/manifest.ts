@@ -9,6 +9,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description:
       "Nova Fetch is a modern desktop downloader with a beautiful interface, fast downloads, queue management, resume support and more.",
 
+    id: "/",
+
     start_url: "/",
 
     display: "standalone",
@@ -19,8 +21,13 @@ export default function manifest(): MetadataRoute.Manifest {
 
     icons: [
       {
-        src: "/logos/logo.png",
-        sizes: "500x500",
+        src: "/icons/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "/icons/icon-512.png",
+        sizes: "512x512",
         type: "image/png",
       },
     ],

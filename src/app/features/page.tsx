@@ -7,18 +7,50 @@ import { GlassCard } from "@/components/ui";
 import { features } from "@/data/features";
 import { Comparison } from "@/components/showcase";
 import { CTA } from "@/components/cta";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  breadcrumbJsonLd,
+  pageMetadata,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Features",
-};
+  description:
+    "Explore Nova Fetch features: multi-threaded high-speed downloads, resume support, a smart download queue, batch downloads, subtitle downloading and a clean, modern Windows interface.",
+  keywords: [
+    "Nova Fetch features",
+    "Video downloader features",
+    "Download manager queue",
+    "Batch downloads",
+    "Resume downloads",
+    "Subtitle downloader",
+  ],
+  path: "/features",
+});
 
 export default function FeaturesPage() {
   return (
     <main>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Features", path: "/features" },
+        ])}
+      />
+      <JsonLd
+        data={webPageJsonLd({
+          name: "Features",
+          description:
+            "Everything Nova Fetch offers: fast, multi-threaded downloads with queue and resume support.",
+          path: "/features",
+        })}
+      />
       <Container className="py-24">
         <Heading
           badge="FEATURES"
           title="Everything you need in one downloader"
+          level={1}
           description="Powerful features wrapped in a clean, modern interface."
         />
 

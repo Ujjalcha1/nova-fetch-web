@@ -36,7 +36,7 @@ export default function HeroStats() {
           }}
           className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl"
         >
-          <h3 className="text-3xl font-bold text-white">{stat.value}</h3>
+          <p className="text-3xl font-bold text-white">{stat.value}</p>
 
           <p className="mt-2 text-sm text-gray-400">{stat.label}</p>
         </motion.div>

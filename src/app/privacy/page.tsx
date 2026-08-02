@@ -4,10 +4,20 @@ import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 
 import { siteConfig } from "@/lib/site";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  breadcrumbJsonLd,
+  pageMetadata,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy",
-};
+  description:
+    "Nova Fetch's privacy policy — how the app processes links locally, what data is collected, analytics, third-party services and your rights.",
+  keywords: ["Nova Fetch privacy policy", "Nova Fetch privacy"],
+  path: "/privacy",
+});
 
 const sections = [
   {
@@ -39,11 +49,25 @@ const sections = [
 export default function PrivacyPage() {
   return (
     <main>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Privacy Policy", path: "/privacy" },
+        ])}
+      />
+      <JsonLd
+        data={webPageJsonLd({
+          name: "Privacy Policy",
+          description: "Nova Fetch privacy policy.",
+          path: "/privacy",
+        })}
+      />
       <Container className="py-24">
         <div className="mx-auto max-w-3xl">
           <Heading
             badge="PRIVACY"
             title="Privacy Policy"
+            level={1}
             description={`Last updated: August 2026 · ${siteConfig.name}`}
           />
 

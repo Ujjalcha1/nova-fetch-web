@@ -7,19 +7,47 @@ import { Check, Download } from "lucide-react";
 
 import { releaseNotes } from "@/data/release-notes";
 import { DOWNLOAD_URL, WINDOWS_VERSION } from "@/lib/downloads";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  breadcrumbJsonLd,
+  pageMetadata,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Release Notes",
-};
+  description:
+    "What's new in Nova Fetch v1.0.0 — a modern UI, smart download queue, batch downloads, subtitle downloader, resume support, performance improvements and bug fixes.",
+  keywords: [
+    "Nova Fetch release notes",
+    "Nova Fetch changelog",
+    "Nova Fetch v1.0.0",
+  ],
+  path: "/changelog",
+});
 
 export default function ChangelogPage() {
   return (
     <main>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Release Notes", path: "/changelog" },
+        ])}
+      />
+      <JsonLd
+        data={webPageJsonLd({
+          name: "Release Notes",
+          description: "What's new in Nova Fetch v1.0.0.",
+          path: "/changelog",
+        })}
+      />
       <Container className="py-24">
         <div className="mx-auto max-w-3xl">
           <Heading
             badge="RELEASE NOTES"
             title="What's new in Nova Fetch"
+            level={1}
             description="The latest changes and improvements, shipped with every release."
           />
 

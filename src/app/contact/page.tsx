@@ -6,14 +6,37 @@ import { GlassCard } from "@/components/ui";
 import { Mail, Clock } from "lucide-react";
 
 import { siteConfig } from "@/lib/site";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  breadcrumbJsonLd,
+  pageMetadata,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact",
-};
+  description:
+    "Contact the Nova Fetch team with questions, feedback or anything else. Reach us by email — we usually respond within 24 hours.",
+  keywords: ["Contact Nova Fetch", "Nova Fetch email", "Nova Fetch feedback"],
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
     <main>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ])}
+      />
+      <JsonLd
+        data={webPageJsonLd({
+          name: "Contact",
+          description: "Contact the Nova Fetch team by email.",
+          path: "/contact",
+        })}
+      />
       <Container className="py-24">
         <div className="mx-auto max-w-2xl text-center">
           <Badge>CONTACT</Badge>

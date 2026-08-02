@@ -9,7 +9,7 @@ export default function HeroContent() {
     <div className="text-center">
       <Badge>🚀 The fastest, most secure downloader for Windows</Badge>
 
-      <SplitText text="Download Videos Faster Than Ever" />
+      <SplitText text="Download Videos Faster Than Ever" tag="h1" />
 
       <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-gray-400">
         Nova Fetch lets you download videos, audio and subtitles in the highest

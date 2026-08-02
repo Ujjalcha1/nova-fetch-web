@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
+import { organizationJsonLd, webSiteJsonLd } from "@/lib/seo";
+import JsonLd from "@/components/seo/JsonLd";
 import { Aurora, Spotlight } from "@/components/reactbits";
 
 export const metadata: Metadata = {
@@ -40,19 +42,6 @@ export const metadata: Metadata = {
     description: siteConfig.description,
   },
 
-  icons: {
-    icon: [
-      {
-        url: "/logos/logo.png",
-      },
-    ],
-    apple: [
-      {
-        url: "/logos/logo.png",
-      },
-    ],
-  },
-
   other: {
     "contact:email": siteConfig.supportEmail,
   },
@@ -64,29 +53,6 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: siteConfig.name,
-  description: siteConfig.description,
-  applicationCategory: "MultimediaApplication",
-  operatingSystem: "Windows 10/11",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-  },
-  author: {
-    "@type": "Person",
-    name: siteConfig.creator,
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    email: siteConfig.supportEmail,
-    contactType: "customer support",
-  },
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -95,10 +61,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+        <JsonLd data={organizationJsonLd} />
+        <JsonLd data={webSiteJsonLd} />
         <div className="fixed inset-0 -z-10">
           <Aurora />
         </div>

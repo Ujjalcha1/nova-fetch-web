@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Section from "@/components/ui/Section";
 import Heading from "@/components/ui/Heading";
 
@@ -22,6 +24,15 @@ export default function FAQ() {
             answer={faq.answer}
           />
         ))}
+      </div>
+
+      <div className="mt-12 text-center">
+        <Link
+          href="/faq"
+          className="font-medium text-violet-400 transition hover:text-violet-300"
+        >
+          See all questions →
+        </Link>
       </div>
     </Section>
   );

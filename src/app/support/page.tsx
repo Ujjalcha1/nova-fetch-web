@@ -8,18 +8,42 @@ import { Mail } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { faqs } from "@/data/faqs";
 import FAQItem from "@/components/faq/FAQItem";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  breadcrumbJsonLd,
+  pageMetadata,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Support",
-};
+  description:
+    "Get help with Nova Fetch. Find quick answers in the FAQ, or contact email support — usually a response within 24 hours.",
+  keywords: ["Nova Fetch support", "Nova Fetch help", "Nova Fetch contact"],
+  path: "/support",
+});
 
 export default function SupportPage() {
   return (
     <main>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Support", path: "/support" },
+        ])}
+      />
+      <JsonLd
+        data={webPageJsonLd({
+          name: "Support",
+          description: "Get help with Nova Fetch via FAQ and email support.",
+          path: "/support",
+        })}
+      />
       <Container className="py-24">
         <Heading
           badge="SUPPORT"
           title="How can we help?"
+          level={1}
           description="Find quick answers below, or reach out and we'll get back to you."
         />
 

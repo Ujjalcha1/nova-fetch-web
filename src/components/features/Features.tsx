@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { features } from "@/data/features";
 import { Heading, GlassCard } from "@/components/ui";
 
@@ -16,6 +18,15 @@ export default function Features() {
             </p>
           </GlassCard>
         ))}
+      </div>
+
+      <div className="mt-12 text-center">
+        <Link
+          href="/features"
+          className="font-medium text-violet-400 transition hover:text-violet-300"
+        >
+          View all features →
+        </Link>
       </div>
     </section>
   );

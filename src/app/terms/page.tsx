@@ -4,10 +4,20 @@ import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 
 import { siteConfig } from "@/lib/site";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  breadcrumbJsonLd,
+  pageMetadata,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Terms of Service",
-};
+  description:
+    "Nova Fetch terms of service — license for free personal use, acceptable use, warranty disclaimer, limitation of liability and contact.",
+  keywords: ["Nova Fetch terms of service", "Nova Fetch terms"],
+  path: "/terms",
+});
 
 const sections = [
   {
@@ -39,11 +49,25 @@ const sections = [
 export default function TermsPage() {
   return (
     <main>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Terms of Service", path: "/terms" },
+        ])}
+      />
+      <JsonLd
+        data={webPageJsonLd({
+          name: "Terms of Service",
+          description: "Nova Fetch terms of service.",
+          path: "/terms",
+        })}
+      />
       <Container className="py-24">
         <div className="mx-auto max-w-3xl">
           <Heading
             badge="TERMS"
             title="Terms of Service"
+            level={1}
             description={`Last updated: August 2026 · ${siteConfig.name}`}
           />
 
