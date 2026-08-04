@@ -28,6 +28,15 @@ export const metadata: Metadata = {
 
   applicationName: siteConfig.name,
 
+  icons: {
+    icon: [
+      { url: "/logos/logo.png", sizes: "500x500", type: "image/png" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/logos/logo.png", sizes: "500x500", type: "image/png" }],
+  },
+
   openGraph: {
     type: "website",
     url: siteConfig.url,

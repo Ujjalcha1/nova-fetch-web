@@ -8,7 +8,6 @@ import { footerColumns } from "@/data/footer";
 import { siteConfig } from "@/lib/site";
 
 import FooterColumn from "./FooterColumn";
-import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   return (
@@ -43,13 +42,9 @@ export default function Footer() {
 
               <span className="font-medium">{siteConfig.supportEmail}</span>
             </a>
-
-            <div className="mt-8">
-              <SocialLinks />
-            </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:col-span-3">
+          <div className="lg:col-span-3">
             {footerColumns.map((column) => (
               <FooterColumn key={column.title} {...column} />
             ))}

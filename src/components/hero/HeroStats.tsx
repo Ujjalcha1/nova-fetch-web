@@ -1,46 +1,42 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { Download, ShieldCheck, Monitor } from "lucide-react";
 
 const stats = [
   {
-    value: "50K+",
-    label: "Downloads",
+    icon: Download,
+    value: "Free",
+    label: "Forever, no limits",
   },
   {
-    value: "4.9★",
-    label: "User Rating",
+    icon: ShieldCheck,
+    value: "No ads",
+    label: "Or tracking, ever",
   },
   {
-    value: "100+",
-    label: "Supported Sites",
+    icon: Monitor,
+    value: "Native",
+    label: "Windows 10 & 11",
   },
 ];
 
 export default function HeroStats() {
   return (
-    <div className="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-6">
-      {stats.map((stat, index) => (
-        <motion.div
-          key={stat.label}
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 0.2 * index,
-          }}
-          className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl"
-        >
-          <p className="text-3xl font-bold text-white">{stat.value}</p>
+    <div className="mt-10 grid max-w-xl grid-cols-3 gap-4">
+      {stats.map((stat) => {
+        const Icon = stat.icon;
 
-          <p className="mt-2 text-sm text-gray-400">{stat.label}</p>
-        </motion.div>
-      ))}
+        return (
+          <div
+            key={stat.label}
+            className="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 backdrop-blur-xl"
+          >
+            <Icon className="h-5 w-5 text-violet-400" aria-hidden="true" />
+
+            <p className="mt-3 text-lg font-bold text-white">{stat.value}</p>
+
+            <p className="mt-1 text-sm leading-5 text-gray-400">{stat.label}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }
