@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site";
 import { organizationJsonLd, webSiteJsonLd } from "@/lib/seo";
 import JsonLd from "@/components/seo/JsonLd";
 import { Aurora, Spotlight } from "@/components/reactbits";
+import VisitorTracker from "@/components/layout/VisitorTracker";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -76,6 +77,7 @@ export default function RootLayout({
           <Aurora />
         </div>
         <Spotlight />
+        <VisitorTracker />
         {children}
       </body>
     </html>

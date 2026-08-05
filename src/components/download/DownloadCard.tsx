@@ -1,5 +1,9 @@
+"use client";
+
 import { Download, FileText, Monitor } from "lucide-react";
 import { Button, GlassCard } from "@/components/ui";
+import { INSTALLER_FILENAME } from "@/lib/downloads";
+import DownloadLink from "./DownloadLink";
 
 interface Props {
   title: string;
@@ -51,10 +55,14 @@ export default function DownloadCard(props: Props) {
 
       <div className="mt-8 flex flex-col gap-4 sm:flex-row">
         <Button asChild className="flex-1">
-          <a href={props.downloadUrl}>
+          <DownloadLink
+            href={props.downloadUrl}
+            version={props.version}
+            fileName={INSTALLER_FILENAME}
+          >
             <Download className="mr-2 h-5 w-5" aria-hidden="true" />
             Download for Windows
-          </a>
+          </DownloadLink>
         </Button>
 
         <Button asChild variant="secondary" className="flex-1">

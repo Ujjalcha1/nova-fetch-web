@@ -6,7 +6,12 @@ import { Button, GlassCard } from "@/components/ui";
 import { Check, Download } from "lucide-react";
 
 import { releaseNotes } from "@/data/release-notes";
-import { DOWNLOAD_URL, WINDOWS_VERSION } from "@/lib/downloads";
+import {
+  DOWNLOAD_URL,
+  INSTALLER_FILENAME,
+  WINDOWS_VERSION,
+} from "@/lib/downloads";
+import DownloadLink from "@/components/download/DownloadLink";
 import JsonLd from "@/components/seo/JsonLd";
 import {
   breadcrumbJsonLd,
@@ -65,10 +70,14 @@ export default function ChangelogPage() {
                 </div>
 
                 <Button asChild>
-                  <a href={DOWNLOAD_URL}>
+                  <DownloadLink
+                    href={DOWNLOAD_URL}
+                    version={WINDOWS_VERSION}
+                    fileName={INSTALLER_FILENAME}
+                  >
                     <Download className="mr-2 h-5 w-5" aria-hidden="true" />
                     Download for Windows
-                  </a>
+                  </DownloadLink>
                 </Button>
               </div>
 
