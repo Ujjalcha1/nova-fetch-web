@@ -2,7 +2,8 @@ import Logo from "./Logo";
 import NavLink from "./NavLink";
 import { navigation } from "@/data/navigation";
 import { Button } from "@/components/ui";
-import { DOWNLOAD_URL } from "@/lib/downloads";
+import { DOWNLOAD_URL, INSTALLER_FILENAME, WINDOWS_VERSION } from "@/lib/downloads";
+import DownloadLink from "@/components/download/DownloadLink";
 
 export default function Navbar() {
   return (
@@ -17,7 +18,13 @@ export default function Navbar() {
         </nav>
 
         <Button asChild className="hidden md:flex">
-          <a href={DOWNLOAD_URL}>Download</a>
+          <DownloadLink
+            href={DOWNLOAD_URL}
+            version={WINDOWS_VERSION}
+            fileName={INSTALLER_FILENAME}
+          >
+            Download
+          </DownloadLink>
         </Button>
       </div>
     </header>
