@@ -41,11 +41,11 @@ export default function RatingStat() {
 
       <p className="mt-2 text-sm text-gray-400">User Rating</p>
 
-      <p className="mt-1 text-xs text-gray-500">
+      {/* <p className="mt-1 text-xs text-gray-500">
         {summary
           ? `${summary.totalRatings} ratings · ${summary.totalReviews} reviews`
           : "…"}
-      </p>
+      </p> */}
     </div>
   );
 }
