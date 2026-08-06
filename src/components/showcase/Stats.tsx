@@ -1,8 +1,13 @@
 import { stats } from "@/data/showcase";
 
+import DownloadStat from "./DownloadStat";
+import RatingStat from "./RatingStat";
+
 export default function Stats() {
   return (
     <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+      <DownloadStat />
+
       {stats.map((stat) => (
         <div
           key={stat.label}
@@ -15,6 +20,8 @@ export default function Stats() {
           <p className="mt-2 text-sm text-gray-400">{stat.label}</p>
         </div>
       ))}
+
+      <RatingStat />
     </div>
   );
 }
