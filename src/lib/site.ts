@@ -18,7 +18,7 @@ export const siteConfig: SiteConfig = {
   description:
     "Nova Fetch is a modern desktop downloader with a beautiful interface, fast downloads, queue management, resume support and more.",
 
-  url: "https://novafetch.app",
+  url: "https://novafetch.ujjal.in",
 
   creator: "Ujjal Chatterjee",
 

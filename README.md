@@ -4,7 +4,7 @@
 
 **The marketing & download website for Nova Fetch** — a fast, modern and secure desktop downloader for Windows.
 
-[novafetch.app](https://novafetch.app)
+[novafetch.app](https://novafetch.ujjal.in)
 
 ![Next.js](https://img.shields.io/badge/Next.js-16.2.11-black?style=flat-square&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-19.2.4-61DAFB?style=flat-square&logo=react&logoColor=black)
@@ -19,7 +19,7 @@
 
 Nova Fetch is a modern desktop downloader with a beautiful interface, fast downloads, queue management, resume support and more. This repository contains the website that promotes the application, hosts the Windows installer, and provides release notes, FAQ, support and legal pages.
 
-- **Product site:** <https://novafetch.app>
+- **Product site:** <https://novafetch.ujjal.in>
 - **Supported platforms:** Windows 10 / 11 (x64)
 - **Current app version:** v1.0.0
 - **Price:** Free — no ads, no tracking, no bundled software
