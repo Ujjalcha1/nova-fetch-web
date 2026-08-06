@@ -7,10 +7,8 @@ export interface Stat {
 }
 
 export const stats: Stat[] = [
-  { value: "250K+", label: "Downloads" },
   { value: "3.2×", label: "Faster Downloads" },
   { value: "1000+", label: "Supported Sites" },
-  { value: "4.9★", label: "User Rating" },
 ];
 
 export interface WorkflowStep {
